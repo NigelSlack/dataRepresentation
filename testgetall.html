@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>test get all</title>
+  </head>
+  <body>
+    <button onclick="getAll()">getAll</button>
+    <div id="output"></div>
+    <table id="carsTable">
+      <tr>
+        <th>reg</th><th>make</th><th>model</th><th>price</th><th></th><th></th>
+      </tr>
+    </table>
+   </body>
+   <script>
+     function getAll(){
+       $.ajax({
+         "url": "http://127.0.0.1:5000/cars",
+         "method":"GET",
+         "data":"",
+         "dataType": "JSON",
+         "success":function(result){
+           console.log(result);
+           var tableElement = document.getElementById("carsTable")
+           for (car of result.cars){
+               var rowElement = tableElement.insertRow(-1)
+               var cellElement = rowElement.insertCell(0) 
+               cellElement.innerHTML = car.reg;
+               cellElement = rowElement.insertCell(1)
+               cellElement.innerHTML = car.make;
+               cellElement = rowElement.insertCell(2)
+               cellElement.innerHTML = car.model;
+               cellElement = rowElement.insertCell(3)
+               cellElement.innerHTML = car.price;
+               cellElement = rowElement.insertCell(4)
+               cellElement.innerHTML = "";
+               cellElement = rowElement.insertCell(5)
+               cellElement.innerHTML = "";
+               console.log(car);
+           } 
+           },
+         "error":function(xhr,status,error){
+           console.log("error: "+status+" msg:"+error);
+           }   
+       });
+     }
+   </script>
+</html>
