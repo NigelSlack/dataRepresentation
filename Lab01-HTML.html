@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Car Viewer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Cars</h1>
+    <div><button id="showCreateButton">Create</button></div>
+    <h2>All Cars</h2>
+    <div>
+      <table class="table" id="carTable">
+        <tr>
+          <th>Reg</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Price</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+        <tr>
+          <td>11 G 1293</td>
+          <td>Kia</td>
+          <td>Ceed</td>
+          <td>2,000</td>
+          <td><button onclick="showUpdate(this)">Update</button></td>
+          <td><button onclick="doDelete(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>182 D 893</td>
+          <td>Nissan</td>
+          <td>Micra</td>
+          <td>15,000</td>
+          <td><button onclick="showUpdate(this)">Update</button></td>
+          <td><button onclick="doDelete(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>141 D 123</td>
+          <td>Fiat</td>
+          <td>Punto</td>
+          <td>4,000</td>
+          <td><button onclick="showUpdate(this)">Update</button></td>
+          <td><button onclick="doDelete(this)">Delete</button></td>
+        </tr>
+      </table>
+    </div>
+    <div id='createUpdateForm'>
+      <h2><span id="createLabel">Create a</span> <span id="updateLabel">update</span> Car</h2>
+      Reg<input type="text" name="reg"/> <br/>
+      Make<select name="make"> 
+        <option value="Kia">Kia</option>
+        <option value="Fiat">Fiat</option>
+        <option value="Nissan">Nissan</option>
+        </select> <br/> 
+      Model<input type="text" name="model"/> <br/>
+      Price<input type="number" name="price"/> <br/>
+      <span><button id="doCreateButton" >Create</button></span>
+      <span><button id="doUpdateButton" >Update</button></span>     
+    </div>
+  </body>
+</html>
