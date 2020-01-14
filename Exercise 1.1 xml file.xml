@@ -1,0 +1,23 @@
+<?xml version = “1.0” encoding = “UTF-8”>
+<library>
+  <catalogue category=”Technical Books”>
+    <book isbn=”324-0736485643”>
+        <title>Simple Statistics</title>
+        <author>Mark Jones</author>
+    </book>
+    <book isbn=”336-0865745644”>
+        <title>Inorganic Chemistry</title>
+        <author>Janet McLean</author>
+    </book>        
+  </catalogue>
+  <catalogue category=”Cookery Books”>
+    <book isbn=”698-3524746374”>
+        <title>Starter guide for student cookery</title>
+        <author>Claude LeMann</author>
+    </book>
+    <book isbn=”768-6475845623”>
+        <title>Simple Thai Curries</title>
+        <author>Ann Clooney</author>
+    </book>        
+  </catalogue>
+</library>
